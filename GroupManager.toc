@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: GroupManager |cFFFF8080-AbusivePapi-|r
+## Notes: Instance Searcher
+## Author: AbusivePapi - Kronos3
+## Version: 1.0
+
+GroupManager.lua
