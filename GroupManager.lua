@@ -1,9 +1,3 @@
--- Freundesliste direkt bei jedem add oder delete checken
--- Leute müssen aus der Liste nach einer Minute geworfen werden und oder die class überschrieben bei erneuter Anmeldung <<
--- Bei dps change muss auch der bak angepasst werden aber nur wenn schon aktiv
--- Multisupport für tank/dps
--- Leute in der gruppe anschreiben und nach den klassen fragen wenn pregroup
-
 GroupManager = {}
 GroupManager.addonActive = false;
 GroupManager.instance = "None";
@@ -376,17 +370,6 @@ function GroupManager:playersOrRaidSizeProgress()
             end
         end
     end
-end
-
-function GroupManager:NotifyMe()
-    local url = 'https://discordapp.com/api/webhooks/545165876551221249/5rwRoXGZavmKcqhjc-oBkgL1rSWJgUXUGHzkNXGXnlOH2Ct6y04uDtEVtytpSOzEoHjN';
-	local msg3 = '{"name": "Wake Up", "channel_id": "545165075582025729", "token": "5rwRoXGZavmKcqhjc-oBkgL1rSWJgUXUGHzkNXGXnlOH2Ct6y04uDtEVtytpSOzEoHjN", "avatar": "4b118a744ee1299eeb13ebceabb5d12b", "guild_id": "545165075057475592", "id": "545165876551221249", "content": "Dungeon is ready!"}';
-	SendHTTPRequest(url, (msg3),
-        function(body, code, req, res)
-			print("Complete: " .. tostring(code));
-        end,
-		"Content-Type: application/json\r\n"
-    )
 end
 
 function GroupManager:PlayerLeft()
